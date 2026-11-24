@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi năm dương lịch sang năm âm lịch</title>
+</head>
+<body>
+    <script>
+        let year = parseInt(prompt("Nhập vào năm dương lịch cần đổi:"));
+
+        if (isNaN(year) || year <= 0) {
+            alert("ERROR");
+        } else {
+            let can = ["Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ", "Canh", "Tân", "Nhâm", "Quý"];
+            let chi = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"];
+
+            let dau = can[(year + 6) % 10];
+            let duoi = chi[(year + 8) % 12];
+
+        alert("Năm dương lịch "+year +" có năm âm lịch là: " + dau +" "+ duoi);
+        }
+    </script>
+</body>
+</html>
